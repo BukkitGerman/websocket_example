@@ -32,7 +32,7 @@ class ServerClass < EventMachine::Connection
 end
 
 EventMachine.run do
-  $ems = EventMachine::start_server('127.0.0.1', 1337, ServerClass)
+  $ems = EventMachine::start_server('127.0.0.1', 3001, ServerClass)
 
   class App < Sinatra::Base
     set :public, File.dirname(__FILE__) + '/public'
