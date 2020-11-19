@@ -14,7 +14,8 @@ class ServerClass < EventMachine::Connection
   end
 
   def receive_data(data)
-    # got information from client connection
+    puts data
+    channels_send("Receive: " + data)
   end
 
   def channel_send(msg,channel)
