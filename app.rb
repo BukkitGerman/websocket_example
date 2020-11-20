@@ -14,7 +14,7 @@ class ServerClass < EventMachine::Connection
   end
 
   def receive_data(data)
-    puts data
+    puts "Data: " + data
     channels_send("Receive: " + data)
   end
 
@@ -36,7 +36,7 @@ EventMachine.run do
   $ems = EventMachine::start_server('127.0.0.1', 3001, ServerClass)
 
   class App < Sinatra::Base
-    set :public, File.dirname(__FILE__) + '/public'
+    set :public_dir, File.dirname(__FILE__) + '/public'
 
     get '/' do
       erb :index          

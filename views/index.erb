@@ -29,10 +29,12 @@ function connect() {
 
     socket.onopen = function() {
       addMessage("Socket Status: " + socket.readyState + " (open)");
+      console.log("open")
     }
 
     socket.onclose = function() {
       addMessage("Socket Status: " + socket.readyState + " (closed)");
+      console.log("closed")
     }
 
     socket.onmessage = function(msg) {
