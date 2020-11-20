@@ -16,10 +16,10 @@
     <script>
 
 function addMessage(msg) {
-  $("#chat-log").append("" + msg + "");
+  $("#chat-log").append("" + msg + "<br/>+");
 }
       var socket, host;
-host = "ws://localhost:3001";
+host = "wss://localhost:3001/";
 
 function connect() {
   try {
