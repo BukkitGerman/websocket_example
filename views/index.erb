@@ -16,10 +16,10 @@
     <script>
 
 function addMessage(msg) {
-  $("#chat-log").append("" + msg + "<br/>+");
+  $("#chat-log").append("" + msg + "<br/>");
 }
       var socket, host;
-host = "wss://localhost:3001/";
+host = "wss://rb.test.gamer4life.net/ws/";
 
 function connect() {
   try {
